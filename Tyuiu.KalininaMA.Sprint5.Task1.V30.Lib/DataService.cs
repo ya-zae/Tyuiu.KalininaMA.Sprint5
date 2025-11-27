@@ -31,7 +31,6 @@ namespace Tyuiu.KalininaMA.Sprint5.Task1.V30.Lib
                     y = Math.Round(y, 2);
                 }
 
-                y = Math.Round((Math.Cos(i) + (Math.Sin(i)) / (2 - (2 * i)) - 4 * i), 2);
                 strY = y.ToString();
 
                 if (i != stopValue)

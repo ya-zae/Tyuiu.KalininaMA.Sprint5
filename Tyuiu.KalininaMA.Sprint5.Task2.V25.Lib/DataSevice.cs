@@ -8,20 +8,21 @@ namespace Tyuiu.KalininaMA.Sprint5.Task2.V25.Lib
     {
         public string SaveToFileTextData(int[,] matrix)
         {
-            string path = Path.Combine(Path.GetTempPath(), "OutPutFileTask2.csv");
-            // Удаляем файл если существует
-            if (File.Exists(path))
+            string directory = Path.Combine("D:", "Prog");
+            string path = Path.Combine(directory, "OutPutFileTask2.csv");
+            FileInfo fileInfo = new FileInfo(path);
+            bool fileExists = fileInfo.Exists;
+
+            if (fileExists)
             {
                 File.Delete(path);
             }
+            int rows = matrix.GetUpperBound(0) + 1;
+            int columns = matrix.Length / rows;
 
-            int rows = matrix.GetLength(0);
-            int columns = matrix.GetLength(1);
-
-            // Заменяем нечетные числа на 0
-            for (int i = 0; i < rows; i++)
+            for (int i = 0; i < matrix.GetLength(0); i++)
             {
-                for (int j = 0; j < columns; j++)
+                for (int j = 0; j < matrix.GetLength(1); j++)
                 {
                     if (matrix[i, j] % 2 != 0)
                     {
@@ -29,23 +30,20 @@ namespace Tyuiu.KalininaMA.Sprint5.Task2.V25.Lib
                     }
                 }
             }
-
-            // Записываем в файл
+            string str = "";
             for (int i = 0; i < rows; i++)
             {
-                string str = "";
                 for (int j = 0; j < columns; j++)
                 {
                     if (j != columns - 1)
                     {
-                        str += matrix[i, j] + ";";
+                        str = str + matrix[i, j] + ";";
                     }
                     else
                     {
-                        str += matrix[i, j];
+                        str = str + matrix[i, j];
                     }
                 }
-
                 if (i != rows - 1)
                 {
                     File.AppendAllText(path, str + Environment.NewLine);
@@ -54,7 +52,9 @@ namespace Tyuiu.KalininaMA.Sprint5.Task2.V25.Lib
                 {
                     File.AppendAllText(path, str);
                 }
+                str = "";
             }
+
 
             return path;
         }

@@ -1,5 +1,6 @@
-﻿using System.IO;
-
+﻿using System;
+using System.Globalization;
+using System.IO;
 using tyuiu.cources.programming.interfaces.Sprint5;
 
 namespace Tyuiu.KalininaMA.Sprint5.Task1.V30.Lib
@@ -31,7 +32,7 @@ namespace Tyuiu.KalininaMA.Sprint5.Task1.V30.Lib
                     y = Math.Round(y, 2);
                 }
 
-                strY = y.ToString();
+                string strY = y.ToString(CultureInfo.InvariantCulture);
 
                 if (i != stopValue)
                 {

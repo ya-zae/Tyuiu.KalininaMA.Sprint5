@@ -9,9 +9,10 @@ namespace Tyuiu.KalininaMA.Sprint5.Task1.V30.Lib
         public string SaveToFileTextData(int startValue, int stopValue)
         {
             string path = $@"{Path.GetTempPath()}OutPutFileTask1.txt";
-            FileInfo fileInfo = new FileInfo(path);
-            bool fileExists = fileInfo.Exists;
-            if (fileExists)
+///            FileInfo fileInfo = new FileInfo(path);
+///            bool fileExists = fileInfo.Exists;
+
+            if (File.Exists(path))
             {
                 File.Delete(path);
             }

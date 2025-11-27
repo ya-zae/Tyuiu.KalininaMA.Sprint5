@@ -8,31 +8,28 @@ namespace Tyuiu.KalininaMA.Sprint5.Task1.V30.Lib
     {
         public string SaveToFileTextData(int startValue, int stopValue)
         {
-            string path = $@"{Directory.GetCurrentDirectory()}\outPutFileTask1.txt";
+            string path = $@"{Path.GetTempPath()}OutPutFileTask1.txt";
             FileInfo fileInfo = new FileInfo(path);
             bool fileExists = fileInfo.Exists;
-
             if (fileExists)
             {
                 File.Delete(path);
             }
 
-            double y;
-            string strY;
 
-            for (int x = startValue; x <= stopValue; x++)
+            string strY;
+            double y;
+            for (int i = startValue; i <= stopValue; i++)
             {
-                if (x == 1)
+                if (2 - (2 * i) == 0)
                 {
                     y = 0;
-                    strY = y.ToString();
                 }
-                else
-                {
-                    y = Math.Round((Math.Cos(x) + (Math.Sin(x)) / (2 - (2 * x)) - 4 * x), 2);
-                    strY = y.ToString();
-                }
-                if (x != stopValue)
+
+                y = Math.Round((Math.Cos(i) + (Math.Sin(i)) / (2 - (2 * i)) - 4 * i), 2);
+                strY = y.ToString();
+
+                if (i != stopValue)
                 {
                     File.AppendAllText(path, strY + Environment.NewLine);
                 }

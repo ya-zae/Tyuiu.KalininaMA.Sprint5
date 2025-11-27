@@ -16,23 +16,13 @@ namespace Tyuiu.KalininaMA.Sprint5.Task1.V30.Lib
                 File.Delete(path);
             }
 
-
             string strY;
             double y;
             for (int i = startValue; i <= stopValue; i++)
             {
-                if (i == 0)
+                if (2 - (2 * i) == 0)
                 {
                     y = 0;
-                }
-                else if (2 - 2 * i == 0)
-                {
-                    y = 0;
-                }
-                else
-                {
-                    y = Math.Cos(i) + (Math.Sin(i) / (2 - 2 * i)) - 4 * i;
-                    y = Math.Round(y, 2);
                 }
 
                 y = Math.Round((Math.Cos(i) + (Math.Sin(i)) / (2 - (2 * i)) - 4 * i), 2);

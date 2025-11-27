@@ -25,6 +25,11 @@ namespace Tyuiu.KalininaMA.Sprint5.Task1.V30.Lib
                 {
                     y = 0;
                 }
+                else  // <- ЭТОЙ СТРОЧКИ НЕ БЫЛО!
+                {
+                    y = Math.Cos(i) + (Math.Sin(i) / (2 - 2 * i)) - 4 * i;
+                    y = Math.Round(y, 2);
+                }
 
                 y = Math.Round((Math.Cos(i) + (Math.Sin(i)) / (2 - (2 * i)) - 4 * i), 2);
                 strY = y.ToString();

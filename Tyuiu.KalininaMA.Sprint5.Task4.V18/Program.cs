@@ -11,8 +11,8 @@ namespace Tyuiu.KalininaMA.Sprint5.Task4.V18
             Console.WriteLine("***************************************************************************");
             Console.WriteLine("* Спринт #5                                                               *");
             Console.WriteLine("* Тема: Потоковый метод записи данных в бинарный файл                     *");
-            Console.WriteLine("* Задание #3                                                              *");
-            Console.WriteLine("* Вариант #30                                                             *");
+            Console.WriteLine("* Задание #4                                                              *");
+            Console.WriteLine("* Вариант #18                                                             *");
             Console.WriteLine("* Выполнила: Калинина М.А | РППб-25-1                                     *");
             Console.WriteLine("***************************************************************************");
             Console.WriteLine("* УСЛОВИЕ:                                                                *");

@@ -55,7 +55,6 @@ namespace Tyuiu.KalininaMA.Sprint5.Task2.V25.Lib
                 str = "";
             }
 
-
             return path;
         }
     }

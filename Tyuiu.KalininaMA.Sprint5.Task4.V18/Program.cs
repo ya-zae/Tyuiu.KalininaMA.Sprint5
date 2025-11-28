@@ -22,7 +22,6 @@ namespace Tyuiu.KalininaMA.Sprint5.Task4.V18
             Console.WriteLine("* ИСХОДНЫЕ ДАННЫЕ:                                                        *");
             string path = Path.Combine(Path.GetTempPath(), "InPutDataFileTask4V18.txt");
 
-
             Console.WriteLine("***************************************************************************");
             Console.WriteLine("* РЕЗУЛЬТАТ:                                                              *");
             Console.WriteLine("***************************************************************************");

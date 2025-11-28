@@ -37,6 +37,7 @@ namespace Tyuiu.KalininaMA.Sprint5.Task6.V2
             double res = ds.LoadFromDataFile(path);
             Console.WriteLine(res);
             Console.ReadKey();
+
         }
     }
 }
